@@ -12,6 +12,10 @@ library(readr)
 library(dplyr)
 colony <- read_csv("data/colony.csv")
 View(colony)
+```
+```{r}
+#| label: tbl-months
+#| tbl-cap: "Colony Losses and Additions By Month"
 tbl_summary(
 	colony,
 	by = months,
@@ -20,6 +24,11 @@ tbl_summary(
 
 ```{r}
 linear_model <- lm(colony_lost_pct ~ months + state + year + colony_added + colony_reno_pct, data = colony)
+```
+
+```{r}
+#| label: tbl-regression
+#| tbl-cap: "Multivariable Regression Results"
 tbl_regression(
 	linear_model,
 	exponentiate = FALSE,
@@ -34,6 +43,8 @@ tbl_regression(
 ```
 
 ```{r}
+#| label: fig-hist
+#| fig-cap: "Colony Loss Histogram"
 hist(colony[["colony_lost_pct"]],
 		 main = paste("Histogram of Colony Losses"),
 		 xlab = "Percent of Colonies Lost",
