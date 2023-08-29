@@ -24,9 +24,13 @@ hist(colony[["colony_lost_pct"]],
 		 main = paste("Histogram of Colony Losses"),
 		 xlab = "Percent of Colonies Lost",
 		 ylab = "Frequency",
-		 col = "lightblue",
+		 col = "pink",
 		 border = "black")
-
-
-
-
+#creeate function
+new_range <- function(x) {
+	range_val <- max(x) - min(x)
+	return(range_val)
+}
+#use function
+range_colony_max <- new_range(colony$colony_max)
+print(range_colony_max)
