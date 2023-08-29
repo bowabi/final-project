@@ -28,9 +28,16 @@ hist(colony[["colony_lost_pct"]],
 		 border = "black")
 #creeate function
 new_range <- function(x) {
-	range_val <- max(x) - min(x)
+	range_val <- max(x, na.rm = TRUE) - min(x, na.rm = TRUE)
 	return(range_val)
 }
-#use function
+
 range_colony_max <- new_range(colony$colony_max)
 print(range_colony_max)
+
+
+
+
+
+
+
