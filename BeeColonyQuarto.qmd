@@ -24,6 +24,8 @@ tbl_summary(
 
 ```{r}
 linear_model <- lm(colony_lost_pct ~ months + state + year + colony_added + colony_reno_pct, data = colony)
+stats <- list(n = nrow(colony),
+              mean_colony = mean(colony$colony_lost, na.rm = TRUE))
 ```
 
 ```{r}
@@ -41,6 +43,8 @@ tbl_regression(
 	)
 )
 ```
+
+testing `r stats$mean_colony`
 
 ```{r}
 #| label: fig-hist
