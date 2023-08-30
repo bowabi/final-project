@@ -106,9 +106,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "/Users/abbybowen/Desktop/Class Documents/590R/final-590R/data/colony.csv"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gtsummary)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gtsummary)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>#StandWithUkraine</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>
 Attaching package: 'dplyr'</code></pre>
@@ -123,7 +126,7 @@ Attaching package: 'dplyr'</code></pre>
 
     intersect, setdiff, setequal, union</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>colony <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/colony.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>colony <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/colony.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Rows: 1222 Columns: 10</code></pre>
 </div>
@@ -136,33 +139,33 @@ dbl (8): year, colony_n, colony_max, colony_lost, colony_lost_pct, colony_ad...
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">View</span>(colony)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">View</span>(colony)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tbl_summary</span>(</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    colony,</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">by =</span> months,</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">include =</span> <span class="fu">c</span>(colony_lost_pct, colony_added, colony_lost))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tbl_summary</span>(</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    colony,</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">by =</span> months,</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">include =</span> <span class="fu">c</span>(colony_lost_pct, colony_added, colony_lost))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div id="tbl-months" class="anchored">
 
-<div id="fmjjjakaom" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#fmjjjakaom table {
+<div id="uathvjahau" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#uathvjahau table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#fmjjjakaom thead, #fmjjjakaom tbody, #fmjjjakaom tfoot, #fmjjjakaom tr, #fmjjjakaom td, #fmjjjakaom th {
+#uathvjahau thead, #uathvjahau tbody, #uathvjahau tfoot, #uathvjahau tr, #uathvjahau td, #uathvjahau th {
   border-style: none;
 }
 
-#fmjjjakaom p {
+#uathvjahau p {
   margin: 0;
   padding: 0;
 }
 
-#fmjjjakaom .gt_table {
+#uathvjahau .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -188,12 +191,12 @@ dbl (8): year, colony_n, colony_max, colony_lost, colony_lost_pct, colony_ad...
   border-left-color: #D3D3D3;
 }
 
-#fmjjjakaom .gt_caption {
+#uathvjahau .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#fmjjjakaom .gt_title {
+#uathvjahau .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -205,7 +208,7 @@ dbl (8): year, colony_n, colony_max, colony_lost, colony_lost_pct, colony_ad...
   border-bottom-width: 0;
 }
 
-#fmjjjakaom .gt_subtitle {
+#uathvjahau .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -217,7 +220,7 @@ dbl (8): year, colony_n, colony_max, colony_lost, colony_lost_pct, colony_ad...
   border-top-width: 0;
 }
 
-#fmjjjakaom .gt_heading {
+#uathvjahau .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -229,13 +232,13 @@ dbl (8): year, colony_n, colony_max, colony_lost, colony_lost_pct, colony_ad...
   border-right-color: #D3D3D3;
 }
 
-#fmjjjakaom .gt_bottom_border {
+#uathvjahau .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#fmjjjakaom .gt_col_headings {
+#uathvjahau .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -250,7 +253,7 @@ dbl (8): year, colony_n, colony_max, colony_lost, colony_lost_pct, colony_ad...
   border-right-color: #D3D3D3;
 }
 
-#fmjjjakaom .gt_col_heading {
+#uathvjahau .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -270,7 +273,7 @@ dbl (8): year, colony_n, colony_max, colony_lost, colony_lost_pct, colony_ad...
   overflow-x: hidden;
 }
 
-#fmjjjakaom .gt_column_spanner_outer {
+#uathvjahau .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -282,15 +285,15 @@ dbl (8): year, colony_n, colony_max, colony_lost, colony_lost_pct, colony_ad...
   padding-right: 4px;
 }
 
-#fmjjjakaom .gt_column_spanner_outer:first-child {
+#uathvjahau .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#fmjjjakaom .gt_column_spanner_outer:last-child {
+#uathvjahau .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#fmjjjakaom .gt_column_spanner {
+#uathvjahau .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -302,11 +305,11 @@ dbl (8): year, colony_n, colony_max, colony_lost, colony_lost_pct, colony_ad...
   width: 100%;
 }
 
-#fmjjjakaom .gt_spanner_row {
+#uathvjahau .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#fmjjjakaom .gt_group_heading {
+#uathvjahau .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -332,7 +335,7 @@ dbl (8): year, colony_n, colony_max, colony_lost, colony_lost_pct, colony_ad...
   text-align: left;
 }
 
-#fmjjjakaom .gt_empty_group_heading {
+#uathvjahau .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -347,15 +350,15 @@ dbl (8): year, colony_n, colony_max, colony_lost, colony_lost_pct, colony_ad...
   vertical-align: middle;
 }
 
-#fmjjjakaom .gt_from_md > :first-child {
+#uathvjahau .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#fmjjjakaom .gt_from_md > :last-child {
+#uathvjahau .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#fmjjjakaom .gt_row {
+#uathvjahau .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -374,7 +377,7 @@ dbl (8): year, colony_n, colony_max, colony_lost, colony_lost_pct, colony_ad...
   overflow-x: hidden;
 }
 
-#fmjjjakaom .gt_stub {
+#uathvjahau .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -387,7 +390,7 @@ dbl (8): year, colony_n, colony_max, colony_lost, colony_lost_pct, colony_ad...
   padding-right: 5px;
 }
 
-#fmjjjakaom .gt_stub_row_group {
+#uathvjahau .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -401,15 +404,15 @@ dbl (8): year, colony_n, colony_max, colony_lost, colony_lost_pct, colony_ad...
   vertical-align: top;
 }
 
-#fmjjjakaom .gt_row_group_first td {
+#uathvjahau .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#fmjjjakaom .gt_row_group_first th {
+#uathvjahau .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#fmjjjakaom .gt_summary_row {
+#uathvjahau .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -419,16 +422,16 @@ dbl (8): year, colony_n, colony_max, colony_lost, colony_lost_pct, colony_ad...
   padding-right: 5px;
 }
 
-#fmjjjakaom .gt_first_summary_row {
+#uathvjahau .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#fmjjjakaom .gt_first_summary_row.thick {
+#uathvjahau .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#fmjjjakaom .gt_last_summary_row {
+#uathvjahau .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -438,7 +441,7 @@ dbl (8): year, colony_n, colony_max, colony_lost, colony_lost_pct, colony_ad...
   border-bottom-color: #D3D3D3;
 }
 
-#fmjjjakaom .gt_grand_summary_row {
+#uathvjahau .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -448,7 +451,7 @@ dbl (8): year, colony_n, colony_max, colony_lost, colony_lost_pct, colony_ad...
   padding-right: 5px;
 }
 
-#fmjjjakaom .gt_first_grand_summary_row {
+#uathvjahau .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -458,7 +461,7 @@ dbl (8): year, colony_n, colony_max, colony_lost, colony_lost_pct, colony_ad...
   border-top-color: #D3D3D3;
 }
 
-#fmjjjakaom .gt_last_grand_summary_row_top {
+#uathvjahau .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -468,11 +471,11 @@ dbl (8): year, colony_n, colony_max, colony_lost, colony_lost_pct, colony_ad...
   border-bottom-color: #D3D3D3;
 }
 
-#fmjjjakaom .gt_striped {
+#uathvjahau .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#fmjjjakaom .gt_table_body {
+#uathvjahau .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -481,7 +484,7 @@ dbl (8): year, colony_n, colony_max, colony_lost, colony_lost_pct, colony_ad...
   border-bottom-color: #D3D3D3;
 }
 
-#fmjjjakaom .gt_footnotes {
+#uathvjahau .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -495,7 +498,7 @@ dbl (8): year, colony_n, colony_max, colony_lost, colony_lost_pct, colony_ad...
   border-right-color: #D3D3D3;
 }
 
-#fmjjjakaom .gt_footnote {
+#uathvjahau .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -504,7 +507,7 @@ dbl (8): year, colony_n, colony_max, colony_lost, colony_lost_pct, colony_ad...
   padding-right: 5px;
 }
 
-#fmjjjakaom .gt_sourcenotes {
+#uathvjahau .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -518,7 +521,7 @@ dbl (8): year, colony_n, colony_max, colony_lost, colony_lost_pct, colony_ad...
   border-right-color: #D3D3D3;
 }
 
-#fmjjjakaom .gt_sourcenote {
+#uathvjahau .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -526,63 +529,63 @@ dbl (8): year, colony_n, colony_max, colony_lost, colony_lost_pct, colony_ad...
   padding-right: 5px;
 }
 
-#fmjjjakaom .gt_left {
+#uathvjahau .gt_left {
   text-align: left;
 }
 
-#fmjjjakaom .gt_center {
+#uathvjahau .gt_center {
   text-align: center;
 }
 
-#fmjjjakaom .gt_right {
+#uathvjahau .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#fmjjjakaom .gt_font_normal {
+#uathvjahau .gt_font_normal {
   font-weight: normal;
 }
 
-#fmjjjakaom .gt_font_bold {
+#uathvjahau .gt_font_bold {
   font-weight: bold;
 }
 
-#fmjjjakaom .gt_font_italic {
+#uathvjahau .gt_font_italic {
   font-style: italic;
 }
 
-#fmjjjakaom .gt_super {
+#uathvjahau .gt_super {
   font-size: 65%;
 }
 
-#fmjjjakaom .gt_footnote_marks {
+#uathvjahau .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#fmjjjakaom .gt_asterisk {
+#uathvjahau .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#fmjjjakaom .gt_indent_1 {
+#uathvjahau .gt_indent_1 {
   text-indent: 5px;
 }
 
-#fmjjjakaom .gt_indent_2 {
+#uathvjahau .gt_indent_2 {
   text-indent: 10px;
 }
 
-#fmjjjakaom .gt_indent_3 {
+#uathvjahau .gt_indent_3 {
   text-indent: 15px;
 }
 
-#fmjjjakaom .gt_indent_4 {
+#uathvjahau .gt_indent_4 {
   text-indent: 20px;
 }
 
-#fmjjjakaom .gt_indent_5 {
+#uathvjahau .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -641,42 +644,63 @@ dbl (8): year, colony_n, colony_max, colony_lost, colony_lost_pct, colony_ad...
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>linear_model <span class="ot">&lt;-</span> <span class="fu">lm</span>(colony_lost_pct <span class="sc">~</span> months <span class="sc">+</span> state <span class="sc">+</span> year <span class="sc">+</span> colony_added <span class="sc">+</span> colony_reno_pct, <span class="at">data =</span> colony)</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>stats <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">n =</span> <span class="fu">nrow</span>(colony),</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>              <span class="at">mean_colony =</span> <span class="fu">mean</span>(colony<span class="sc">$</span>colony_lost, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>linear_model <span class="ot">&lt;-</span> <span class="fu">lm</span>(colony_lost_pct <span class="sc">~</span> months <span class="sc">+</span> state <span class="sc">+</span> year <span class="sc">+</span> colony_added <span class="sc">+</span> colony_reno_pct, <span class="at">data =</span> colony)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>average_colonies_2020 <span class="ot">&lt;-</span> colony <span class="sc">%&gt;%</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">2020</span>, state <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Georgia"</span>, <span class="st">"Minnesota"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(state) <span class="sc">%&gt;%</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">average_colony_lost =</span> <span class="fu">mean</span>(colony_lost, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>stats <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">n =</span> <span class="fu">nrow</span>(colony),</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>              <span class="at">mean_colony =</span> <span class="fu">mean</span>(colony<span class="sc">$</span>colony_lost, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>              <span class="at">average_colonies_2020_GA =</span> average_colonies_2020<span class="sc">$</span>average_colony_lost[average_colonies_2020<span class="sc">$</span>state <span class="sc">==</span> <span class="st">"Georgia"</span>],</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>              <span class="at">average_colonies_2020_MN =</span> average_colonies_2020<span class="sc">$</span>average_colony_lost[average_colonies_2020<span class="sc">$</span>state <span class="sc">==</span> <span class="st">"Minnesota"</span>])</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(stats)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>$n
+[1] 1222
+
+$mean_colony
+[1] 16551.32
+
+$average_colonies_2020_GA
+[1] 19375
+
+$average_colonies_2020_MN
+[1] 6875</code></pre>
+</div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tbl_regression</span>(</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    linear_model,</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">exponentiate =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">label =</span> <span class="fu">list</span>(</span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>        months <span class="sc">~</span> <span class="st">"Months"</span>,</span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>        state <span class="sc">~</span> <span class="st">"State"</span>,</span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>        year <span class="sc">~</span> <span class="st">"Year"</span>,</span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>        colony_added <span class="sc">~</span> <span class="st">"Colony Added"</span>,</span>
-<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>        colony_reno_pct <span class="sc">~</span> <span class="st">"Colony Renovated (%)"</span></span>
-<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tbl_regression</span>(</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    linear_model,</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">exponentiate =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">label =</span> <span class="fu">list</span>(</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>        months <span class="sc">~</span> <span class="st">"Months"</span>,</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>        state <span class="sc">~</span> <span class="st">"State"</span>,</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>        year <span class="sc">~</span> <span class="st">"Year"</span>,</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>        colony_added <span class="sc">~</span> <span class="st">"Colony Added"</span>,</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>        colony_reno_pct <span class="sc">~</span> <span class="st">"Colony Renovated (%)"</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div id="tbl-regression" class="anchored">
 
-<div id="qadkdgmmlb" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#qadkdgmmlb table {
+<div id="povupmzoah" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#povupmzoah table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#qadkdgmmlb thead, #qadkdgmmlb tbody, #qadkdgmmlb tfoot, #qadkdgmmlb tr, #qadkdgmmlb td, #qadkdgmmlb th {
+#povupmzoah thead, #povupmzoah tbody, #povupmzoah tfoot, #povupmzoah tr, #povupmzoah td, #povupmzoah th {
   border-style: none;
 }
 
-#qadkdgmmlb p {
+#povupmzoah p {
   margin: 0;
   padding: 0;
 }
 
-#qadkdgmmlb .gt_table {
+#povupmzoah .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -702,12 +726,12 @@ dbl (8): year, colony_n, colony_max, colony_lost, colony_lost_pct, colony_ad...
   border-left-color: #D3D3D3;
 }
 
-#qadkdgmmlb .gt_caption {
+#povupmzoah .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#qadkdgmmlb .gt_title {
+#povupmzoah .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -719,7 +743,7 @@ dbl (8): year, colony_n, colony_max, colony_lost, colony_lost_pct, colony_ad...
   border-bottom-width: 0;
 }
 
-#qadkdgmmlb .gt_subtitle {
+#povupmzoah .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -731,7 +755,7 @@ dbl (8): year, colony_n, colony_max, colony_lost, colony_lost_pct, colony_ad...
   border-top-width: 0;
 }
 
-#qadkdgmmlb .gt_heading {
+#povupmzoah .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -743,13 +767,13 @@ dbl (8): year, colony_n, colony_max, colony_lost, colony_lost_pct, colony_ad...
   border-right-color: #D3D3D3;
 }
 
-#qadkdgmmlb .gt_bottom_border {
+#povupmzoah .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#qadkdgmmlb .gt_col_headings {
+#povupmzoah .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -764,7 +788,7 @@ dbl (8): year, colony_n, colony_max, colony_lost, colony_lost_pct, colony_ad...
   border-right-color: #D3D3D3;
 }
 
-#qadkdgmmlb .gt_col_heading {
+#povupmzoah .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -784,7 +808,7 @@ dbl (8): year, colony_n, colony_max, colony_lost, colony_lost_pct, colony_ad...
   overflow-x: hidden;
 }
 
-#qadkdgmmlb .gt_column_spanner_outer {
+#povupmzoah .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -796,15 +820,15 @@ dbl (8): year, colony_n, colony_max, colony_lost, colony_lost_pct, colony_ad...
   padding-right: 4px;
 }
 
-#qadkdgmmlb .gt_column_spanner_outer:first-child {
+#povupmzoah .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#qadkdgmmlb .gt_column_spanner_outer:last-child {
+#povupmzoah .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#qadkdgmmlb .gt_column_spanner {
+#povupmzoah .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -816,11 +840,11 @@ dbl (8): year, colony_n, colony_max, colony_lost, colony_lost_pct, colony_ad...
   width: 100%;
 }
 
-#qadkdgmmlb .gt_spanner_row {
+#povupmzoah .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#qadkdgmmlb .gt_group_heading {
+#povupmzoah .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -846,7 +870,7 @@ dbl (8): year, colony_n, colony_max, colony_lost, colony_lost_pct, colony_ad...
   text-align: left;
 }
 
-#qadkdgmmlb .gt_empty_group_heading {
+#povupmzoah .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -861,15 +885,15 @@ dbl (8): year, colony_n, colony_max, colony_lost, colony_lost_pct, colony_ad...
   vertical-align: middle;
 }
 
-#qadkdgmmlb .gt_from_md > :first-child {
+#povupmzoah .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#qadkdgmmlb .gt_from_md > :last-child {
+#povupmzoah .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#qadkdgmmlb .gt_row {
+#povupmzoah .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -888,7 +912,7 @@ dbl (8): year, colony_n, colony_max, colony_lost, colony_lost_pct, colony_ad...
   overflow-x: hidden;
 }
 
-#qadkdgmmlb .gt_stub {
+#povupmzoah .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -901,7 +925,7 @@ dbl (8): year, colony_n, colony_max, colony_lost, colony_lost_pct, colony_ad...
   padding-right: 5px;
 }
 
-#qadkdgmmlb .gt_stub_row_group {
+#povupmzoah .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -915,15 +939,15 @@ dbl (8): year, colony_n, colony_max, colony_lost, colony_lost_pct, colony_ad...
   vertical-align: top;
 }
 
-#qadkdgmmlb .gt_row_group_first td {
+#povupmzoah .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#qadkdgmmlb .gt_row_group_first th {
+#povupmzoah .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#qadkdgmmlb .gt_summary_row {
+#povupmzoah .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -933,16 +957,16 @@ dbl (8): year, colony_n, colony_max, colony_lost, colony_lost_pct, colony_ad...
   padding-right: 5px;
 }
 
-#qadkdgmmlb .gt_first_summary_row {
+#povupmzoah .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#qadkdgmmlb .gt_first_summary_row.thick {
+#povupmzoah .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#qadkdgmmlb .gt_last_summary_row {
+#povupmzoah .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -952,7 +976,7 @@ dbl (8): year, colony_n, colony_max, colony_lost, colony_lost_pct, colony_ad...
   border-bottom-color: #D3D3D3;
 }
 
-#qadkdgmmlb .gt_grand_summary_row {
+#povupmzoah .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -962,7 +986,7 @@ dbl (8): year, colony_n, colony_max, colony_lost, colony_lost_pct, colony_ad...
   padding-right: 5px;
 }
 
-#qadkdgmmlb .gt_first_grand_summary_row {
+#povupmzoah .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -972,7 +996,7 @@ dbl (8): year, colony_n, colony_max, colony_lost, colony_lost_pct, colony_ad...
   border-top-color: #D3D3D3;
 }
 
-#qadkdgmmlb .gt_last_grand_summary_row_top {
+#povupmzoah .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -982,11 +1006,11 @@ dbl (8): year, colony_n, colony_max, colony_lost, colony_lost_pct, colony_ad...
   border-bottom-color: #D3D3D3;
 }
 
-#qadkdgmmlb .gt_striped {
+#povupmzoah .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#qadkdgmmlb .gt_table_body {
+#povupmzoah .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -995,7 +1019,7 @@ dbl (8): year, colony_n, colony_max, colony_lost, colony_lost_pct, colony_ad...
   border-bottom-color: #D3D3D3;
 }
 
-#qadkdgmmlb .gt_footnotes {
+#povupmzoah .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1009,7 +1033,7 @@ dbl (8): year, colony_n, colony_max, colony_lost, colony_lost_pct, colony_ad...
   border-right-color: #D3D3D3;
 }
 
-#qadkdgmmlb .gt_footnote {
+#povupmzoah .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1018,7 +1042,7 @@ dbl (8): year, colony_n, colony_max, colony_lost, colony_lost_pct, colony_ad...
   padding-right: 5px;
 }
 
-#qadkdgmmlb .gt_sourcenotes {
+#povupmzoah .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1032,7 +1056,7 @@ dbl (8): year, colony_n, colony_max, colony_lost, colony_lost_pct, colony_ad...
   border-right-color: #D3D3D3;
 }
 
-#qadkdgmmlb .gt_sourcenote {
+#povupmzoah .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1040,63 +1064,63 @@ dbl (8): year, colony_n, colony_max, colony_lost, colony_lost_pct, colony_ad...
   padding-right: 5px;
 }
 
-#qadkdgmmlb .gt_left {
+#povupmzoah .gt_left {
   text-align: left;
 }
 
-#qadkdgmmlb .gt_center {
+#povupmzoah .gt_center {
   text-align: center;
 }
 
-#qadkdgmmlb .gt_right {
+#povupmzoah .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#qadkdgmmlb .gt_font_normal {
+#povupmzoah .gt_font_normal {
   font-weight: normal;
 }
 
-#qadkdgmmlb .gt_font_bold {
+#povupmzoah .gt_font_bold {
   font-weight: bold;
 }
 
-#qadkdgmmlb .gt_font_italic {
+#povupmzoah .gt_font_italic {
   font-style: italic;
 }
 
-#qadkdgmmlb .gt_super {
+#povupmzoah .gt_super {
   font-size: 65%;
 }
 
-#qadkdgmmlb .gt_footnote_marks {
+#povupmzoah .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#qadkdgmmlb .gt_asterisk {
+#povupmzoah .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#qadkdgmmlb .gt_indent_1 {
+#povupmzoah .gt_indent_1 {
   text-indent: 5px;
 }
 
-#qadkdgmmlb .gt_indent_2 {
+#povupmzoah .gt_indent_2 {
   text-indent: 10px;
 }
 
-#qadkdgmmlb .gt_indent_3 {
+#povupmzoah .gt_indent_3 {
   text-indent: 15px;
 }
 
-#qadkdgmmlb .gt_indent_4 {
+#povupmzoah .gt_indent_4 {
   text-indent: 20px;
 }
 
-#qadkdgmmlb .gt_indent_5 {
+#povupmzoah .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -1347,14 +1371,14 @@ dbl (8): year, colony_n, colony_max, colony_lost, colony_lost_pct, colony_ad...
 </div>
 </div>
 </div>
-<p>testing 1.6551319^{4}</p>
+<p>across all states the average number of colonies lost in a given seasonal period is 1.6551319^{4}. The number of was 1.9375^{4}and the number of was 6875</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(colony[[<span class="st">"colony_lost_pct"</span>]],</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>         <span class="at">main =</span> <span class="fu">paste</span>(<span class="st">"Histogram of Colony Losses"</span>),</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">xlab =</span> <span class="st">"Percent of Colonies Lost"</span>,</span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">ylab =</span> <span class="st">"Frequency"</span>,</span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">col =</span> <span class="st">"pink"</span>,</span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>         <span class="at">border =</span> <span class="st">"black"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(colony[[<span class="st">"colony_lost_pct"</span>]],</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>         <span class="at">main =</span> <span class="fu">paste</span>(<span class="st">"Histogram of Colony Losses"</span>),</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">xlab =</span> <span class="st">"Percent of Colonies Lost"</span>,</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">ylab =</span> <span class="st">"Frequency"</span>,</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">col =</span> <span class="st">"pink"</span>,</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>         <span class="at">border =</span> <span class="st">"black"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div id="fig-hist" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">

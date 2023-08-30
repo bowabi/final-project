@@ -13,6 +13,7 @@ library(dplyr)
 colony <- read_csv("data/colony.csv")
 View(colony)
 ```
+
 ```{r}
 #| label: tbl-months
 #| tbl-cap: "Colony Losses and Additions By Month"
@@ -24,8 +25,16 @@ tbl_summary(
 
 ```{r}
 linear_model <- lm(colony_lost_pct ~ months + state + year + colony_added + colony_reno_pct, data = colony)
+average_colonies_2020 <- colony %>%
+  filter(year == 2020, state %in% c("Georgia", "Minnesota")) %>%
+  group_by(state) %>%
+  summarise(average_colony_lost = mean(colony_lost, na.rm = TRUE))
+
 stats <- list(n = nrow(colony),
-              mean_colony = mean(colony$colony_lost, na.rm = TRUE))
+              mean_colony = mean(colony$colony_lost, na.rm = TRUE),
+              average_colonies_2020_GA = average_colonies_2020$average_colony_lost[average_colonies_2020$state == "Georgia"],
+              average_colonies_2020_MN = average_colonies_2020$average_colony_lost[average_colonies_2020$state == "Minnesota"])
+print(stats)
 ```
 
 ```{r}
@@ -44,7 +53,7 @@ tbl_regression(
 )
 ```
 
-testing `r stats$mean_colony`
+across all states the average number of colonies lost in a given seasonal period is `r stats$mean_colony`. The number of was `r stats$average_colonies_2020_GA`and the number of was `r stats$average_colonies_2020_MN`
 
 ```{r}
 #| label: fig-hist
