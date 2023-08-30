@@ -53,7 +53,7 @@ tbl_regression(
 )
 ```
 
-across all states the average number of colonies lost in a given seasonal period is `r stats$mean_colony`. The number of was `r stats$average_colonies_2020_GA`and the number of was `r stats$average_colonies_2020_MN`
+This data (source: USDA) contains information on honeybee colonies including number of colonies, maximum colonies, number of colonies lost, percent lost, number added, number renovated, and percent renovated. @tbl-months shows seasonal variation in the number of colonies lost, added, and percent lost across the US. Across all states the average number of colonies lost in a given seasonal period is `r stats$mean_colony` (with 4 seaonal periods per year). The avarage number of colony losses in the state of Georgia during 2020 was `r stats$average_colonies_2020_GA`and the number of colonies lost in Minnesota during 2020 was `r stats$average_colonies_2020_MN`
 
 ```{r}
 #| label: fig-hist
